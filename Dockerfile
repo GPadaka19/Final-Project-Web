@@ -1,9 +1,10 @@
 FROM nginx:alpine
 
-COPY public/ /usr/share/nginx/html/
+# Salin hanya file dan folder yang diperlukan
+COPY index.html /usr/share/nginx/html/
+COPY assets/ /usr/share/nginx/html/assets/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"] 
+CMD ["nginx", "-g", "daemon off;"]
