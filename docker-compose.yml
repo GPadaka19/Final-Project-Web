@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: eskimo-fe
+    container_name: eskimo-tegar
+    ports:
+      - "3003:80"
+    restart: always

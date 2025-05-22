@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    transition: background 0.3s ease, box-shadow 0.3s ease
+}
+
+.navbar-brand img {
+    transition: width 0.3s ease, height 0.3s ease
+}
+
+.animate__animation {
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+section#beranda {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section#beranda .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #257ca3;
+    opacity: .3;
+}
+
+section#beranda img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+
+section#beranda h1 {
+    color: #f0f8ff;
+    font-size: 72px;
+}
+
+section#about .foto-beranda {
+    border-radius: 20px;
+    height: 600px;
+    width: 450px;
+}
+
+section#about .img-ice{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    /* background-color: #f0f8ff; */
+}
+
+section#about .deskripsi {
+    text-align: justify;
+}
+
+.layanan-card {
+    color: #021022;
+    text-align: center;
+    background: linear-gradient(90deg, #d9d9d945 0%, #D9D9D945 100%);
+    padding: 1.3rem;
+    border-radius: .5rem;
+    transition: all .15s ease;
+    height: 500px;
+}
+
+.layanan-card:hover {
+    color: #f0f8ff;
+    background: linear-gradient(90deg, #7cb9c5 0%, #0b3367 100%);
+    box-shadow: .3rem .3rem 1rem #02102280;
+    transform: scale(1.1);
+}
+
+section#detail {
+    background-color: #38acc2;
+    overflow: hidden;
+    position: relative;
+    padding: 15rem 0;
+}
+
+section#detail img.kertas-atas {
+    transform: rotate(180deg);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+section#detail img.bg-salju {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: .5;
+}
+
+section#detail img.kertas-bawah {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+section#detail h1 {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+section#detail span.text {
+    font-size: 20px;
+}
+
+section#produk p {
+    font-size: 56px;
+}
+
+section#produk .produk-item .nama-produk {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+section#produk .produk-item .ukuran-produk {
+    margin-top: .3rem;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #257ca3;
+    color: aliceblue;
+    padding: .5rem 1.2rem;
+    border-radius: 5rem;
+}
+
+section#prioritas .prioritas-card {
+    perspective: 1000px;
+    position: relative;
+}
+
+section#prioritas .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+section#prioritas .prioritas-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+section#prioritas .card-face {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+section#prioritas .card-face.front {
+    background: white;
+}
+
+section#prioritas .card-face.back {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #bedfef, #81bed2);
+    color: #ffffff;
+    padding: 1rem;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 1.1rem;
+}
+section#prioritas .card-face.back{
+background-color: #257ca3;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 20 px;
+  box-shadow: 0 4px 10px 5px  rgba(0, 0, 0.20, 0.25);
+}
+
+section#prioritas img {
+    border-radius: 1rem;
+}
+
+section#prioritas .card-face.front span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #f0f8ff;
+    font-size: 2rem;
+}
+
+section#kontak {
+    overflow: hidden;
+    color: #f0f8ff;
+    
+}
+section#kontak img.kertas-atas {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+section#kontak img.kertas-hitam {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+section#kontak .detail-kontak {
+    margin-top: 14rem;
+}
+
+section#kontak .detail-kontak .list-jadwal {
+    display: flex;
+    align-items: end;
+    margin-bottom: 1rem;
+}
+
+section#kontak .detail-kontak .list-jadwal .dots {
+    flex-grow: 1;
+    border-bottom: 1.5px dotted #f0f8ff;
+    height: 0;
+    margin: 0 .5rem .5rem;
+}
+
+section#kontak .detail-kontak .hari {
+    white-space: nowrap;
+}
+
+section#kontak .detail-kontak .jam {
+    white-space: nowrap;
+    color: #257ca3;
+}
+
+section#kontak .gambar-galeri {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+section#kontak .ml-2 {
+    color: #ffffff;
+}
+
+.ml-2:hover {
+    color: #38acc2;
+}
