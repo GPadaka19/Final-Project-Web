@@ -7,4 +7,10 @@ services:
     container_name: eskimo-tegar
     ports:
       - "3003:80"
-    restart: always
+    restart: unless-stopped
+    networks:
+      - eskimo-network
+
+networks:
+  eskimo-network:
+    driver: bridge
